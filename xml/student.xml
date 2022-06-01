@@ -1,0 +1,13 @@
+<students>
+	<student>
+		<id>1</id>
+		<name>ABC</name>
+		<email>abc@gmail.com</email>
+
+	</student>
+	<student>
+		<id>2</id>
+		<name>xyz</name>
+		<email></email>
+	</student>
+</students>
