@@ -1,0 +1,4 @@
+1|alamin|123|amin.se.aiub@gmail.com
+2|XYZ|12|amin.se.aiub@gmail.com
+3|admin|admin|amin@aiub.edu
+4|test|test|123@abc.com
