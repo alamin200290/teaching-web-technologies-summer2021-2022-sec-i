@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Example</title>
+
+    <style>
+        #d1 {
+            position: relative;
+            background-color: green;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body> 
+    
+    <h1 id="head">JS Example</h1>
+    <div id="d1">
+
+    </div>
+    <input type="text" id="username" name="username" onkeyup="username()"/>
+    <input type="button" name="" value="Click" onclick="move()"  />
+
+    <script>
+        let a = 10;
+        let b = 30;
+        //alert(a+b);
+        //console.log(a+b);
+        //document.write(a+b);
+        
+        // if(){
+
+        // }else{
+
+        // }
+
+        // let student = [1,'alamin','1234', 'alamin@aiub.edu'];
+        // student[0]
+
+        function test(){
+            let element = document.getElementsByTagName('h1')[0];
+            element.innerHTML = "TEST";
+        }
+
+        function username(){
+           let username = document.getElementById('username').value;
+           document.getElementById('head').innerHTML = username;
+        }
+
+        function move(){
+            let obj= document.getElementById('d1');
+            obj.style.left = "10px";
+        }
+    </script>
+</body>
+</html>
