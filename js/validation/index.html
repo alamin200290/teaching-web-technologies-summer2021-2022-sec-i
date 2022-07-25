@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Example</title>
+</head>
+<body>
+        <form onsubmit="return validate()">
+            Username: <input type="text" id="username" name="" value="" /> <br>
+            Password: <input type="password" id="password" name="" value="" /> <br>
+            <input type="submit" name="" id="submit" value="Submit"/> <br>
+        </form>
+
+        <script>
+            function validate(){
+                let username = document.getElementById('username').value;
+
+                if(username != ""){
+                    return true;
+                }else{
+                    alert('null username');
+                    return false;
+                }
+            }
+        </script>
+</body>
+</html>
