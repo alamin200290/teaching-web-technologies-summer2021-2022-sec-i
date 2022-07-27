@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Example</title>
+</head>
+<body>
+        <h1 id="head">Test Ajax</h1>
+
+        <form>
+            Username: <input type="text" id="username" name="" value="" /> 
+            Password: <input type="password" id="password" name="" value="" /> 
+            <input type="button" name="" id="submit" value="Submit" onclick="ajax()"/> 
+            <input type="button" name="" id="submit" value="Click" onclick="alert('this is another task')"/> <br>
+        </form>
+
+        <script>
+            function validate(){
+                if(username != ""){
+                    return true;
+                }else{
+                    alert('null username');
+                    return false;
+                }
+            }
+
+            function ajax(){ 
+                let username = document.getElementById('username').value;
+                let password = document.getElementById('password').value;
+                let student = {'username' : username, 'password': password};
+                let json = JSON.stringify(student);
+
+                let xhttp = new XMLHttpRequest();
+                // xhttp.open('GET','usercheck.php?username='+username, true);
+                // xhttp.onreadystatechange = function (){                    
+                //     if(this.readyState == 4 && this.status == 200){
+                //         //alert(this.responseText);
+                //         document.getElementById('head').innerHTML = this.responseText;
+                //     }
+                // } 
+                // xhttp.send();
+                
+                xhttp.open('POST','usercheck.php', true);
+                xhttp.onreadystatechange = function (){                    
+                    if(this.readyState == 4 && this.status == 200){
+                        //let student = JSON.parse(this.responseText);
+                        //document.getElementById('head').innerHTML = student.username;
+                        alert(this.responseText);
+                    }
+                }
+
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); 
+                xhttp.send('data='+json);        
+            }
+        </script>
+</body>
+</html>
